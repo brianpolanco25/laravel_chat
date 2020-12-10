@@ -1,3 +1,6 @@
 <div>
-    {{-- Do your work, then step back. --}}
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name">
+    </div>
 </div>
