@@ -20,6 +20,11 @@ class ChatForm extends Component
     }
 
     public function sendMessage(){
+        // Save message
+        // Message::create([
+        //     'message'   =>  $this->message
+        // ]);
+
         $this->emit("messageSuccess");
     }
 }
