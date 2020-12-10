@@ -7,12 +7,19 @@ use Livewire\Component;
 class ChatForm extends Component
 {
     public $name;
+    public $message;
 
     public function mount(){
         $this->name = "";
+        $this->message = "";
     }
+
     public function render()
     {
         return view('livewire.chat-form');
+    }
+
+    public function sendMessage(){
+        $this->emit("messageSuccess");
     }
 }
