@@ -24,7 +24,18 @@ class ChatForm extends Component
         // Message::create([
         //     'message'   =>  $this->message
         // ]);
+        $this->validate([
+            "name"      =>  "required|min:3",
+            "message"   =>  "required"
+        ]);
 
         $this->emit("messageSuccess");
+
+        $data = [
+            "user"      => $this->name,
+            "message"   => $this->message
+        ];
+
+        $this->emit("messageRecived", $data);
     }
 }
